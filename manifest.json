@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "X Dim Theme Forcer",
+  "version": "1.0",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://x.com/*", "*://*.x.com/*", "*://twitter.com/*", "*://*.twitter.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "host_permissions": ["*://x.com/*", "*://*.x.com/*", "*://twitter.com/*", "*://*.twitter.com/*"],
+  "action": {
+    "default_title": "X Dim Theme"
+  }
+}
